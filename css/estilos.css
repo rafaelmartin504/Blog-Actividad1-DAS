@@ -1,0 +1,79 @@
+:root { --papel:#f5f3ed; --tinta:#20231f; --acento:#a24424; }
+body { background:var(--papel); color:var(--tinta); font-family:Arial,Helvetica,sans-serif; line-height:1.7; }
+a { color:inherit; text-underline-offset:4px; }
+a:hover { color:var(--acento); }
+a:focus-visible { outline:3px solid var(--acento); outline-offset:5px; }
+.cabecera { border-bottom:1px solid #d7d7ce; }
+.cabecera nav a { text-decoration:none; font-size:.9rem; }
+.cabecera .marca { font-weight:900; font-size:1.2rem; letter-spacing:-1px; }
+.marca span { font-weight:400; margin-left:.35rem; }
+h1,h2,h3 { font-weight:750; line-height:1.12; letter-spacing:-.04em; }
+.portada h1 { font-size:clamp(3rem,5.6vw,4.8rem); }
+.portada h1 span { color:var(--acento); }
+.entradilla { font-size:1.15rem; color:#55594e; }
+.etiqueta { text-transform:uppercase; color:var(--acento); letter-spacing:.13em; font-weight:700; font-size:.7rem; }
+.foto-portada { width:100%; height:480px; object-fit:cover; }
+.pie-foto { font-size:.65rem; letter-spacing:.12em; margin-top:.8rem; }
+.titulo-seccion { display:flex; align-items:end; justify-content:space-between; border-top:1px solid #c8c9bf; padding-top:2rem; margin-bottom:2rem; }
+.titulo-seccion h2 { font-size:2.5rem; }
+.titulo-seccion>span { font-size:.8rem; }
+.tarjeta { background:#fff; border:1px solid #dedfd5; }
+.foto-tarjeta { width:100%; height:220px; object-fit:cover; }
+.tarjeta h3 { font-size:1.6rem; margin-bottom:1rem; }
+.tarjeta p:not(.etiqueta) { font-size:.95rem; color:#565a50; }
+.enlace { font-weight:700; font-size:.9rem; }
+.sobre { border-top:1px solid #c8c9bf; padding-top:2rem; max-width:850px; }
+.sobre h2 { margin-bottom:1rem; }
+.pie { background:var(--tinta); color:#eee; font-size:.8rem; }
+.articulo { max-width:900px; }
+.articulo h1 { font-size:clamp(2.6rem,6vw,4rem); margin-bottom:1.3rem; }
+.foto-articulo { width:100%; max-height:480px; object-fit:cover; }
+figcaption { color:#65685e; font-size:.75rem; padding-top:.5rem; }
+.texto-articulo { max-width:720px; margin:2rem auto; }
+.texto-articulo h2 { font-size:1.6rem; margin:2rem 0 1rem; }
+.otras { border-top:1px solid #c8c9bf; padding-top:2rem; }
+.otras h2 { font-size:1.4rem; margin-bottom:1rem; }
+.salto { position:absolute; top:-100px; left:1rem; background:white; padding:1rem; z-index:10; }
+.salto:focus { top:0; }
+/* Ajustes propios para móviles, además de la cuadrícula de Bootstrap. */
+@media(max-width:767px) { .foto-portada { height:320px; } .portada { padding-top:2rem!important; } .titulo-seccion h2 { font-size:2rem; } }
+
+/* JavaScript alterna esta clase; CSS en quien decide cómo se visualiza el modo oscuro. */
+.boton-tema { border:1px solid currentColor; background:transparent; color:inherit; padding:.35rem .8rem; font-size:.85rem; }
+.modo-oscuro { --papel:#191d1b; --tinta:#f1f2eb; --acento:#f6a780; }
+.modo-oscuro .tarjeta { background:#252c28; border-color:#566056; }
+.modo-oscuro .entradilla, .modo-oscuro .tarjeta p:not(.etiqueta),
+.modo-oscuro figcaption { color:#c9cfc5; }
+.modo-oscuro .pie { background:#101410; color:#eee; }
+.modo-oscuro .form-control { background:#252c28; color:#f1f2eb; border-color:#788376; }
+.modo-oscuro .form-control::placeholder { color:#bec8ba; }
+.modo-oscuro .salto { background:#252c28; }
+[hidden] { display:none!important; }
+
+/* Carruseles de la primera entrada y visor ampliado. */
+.galeria { margin:1.5rem 0 2rem; }
+.galeria-controles { display:flex; align-items:center; justify-content:flex-end; gap:1rem; margin-bottom:.75rem; }
+.galeria button { color:inherit; }
+.galeria-controles button { background:transparent; border:1px solid currentColor; width:44px; height:44px; }
+.galeria-pista { display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; position:relative; scrollbar-width:thin; touch-action:pan-y; }
+.miniatura { flex:0 0 85%; border:1px solid #a7ada2; padding:0; background:transparent; text-align:left; scroll-snap-align:start; cursor:zoom-in; }
+.miniatura img { width:100%; height:240px; object-fit:contain; background:white; user-select:none; }
+.miniatura span { display:block; padding:.75rem; font-size:.9rem; }
+.galeria button:focus-visible, #visor button:focus-visible { outline:3px solid #e88755; outline-offset:3px; }
+#visor { width:min(1100px,95vw); max-height:94dvh; padding:1rem; border:0; background:#151918; color:#fff; }
+#visor::backdrop { background:rgba(0,0,0,.88); }
+.visor-abierto { overflow:hidden; }
+.visor-barra { display:flex; justify-content:space-between; align-items:center; }
+#visor button { color:white; background:#303633; border:1px solid #858d87; min-width:44px; min-height:44px; font-size:1.3rem; }
+.visor-escenario { display:grid; grid-template-columns:44px minmax(0,1fr) 44px; align-items:center; gap:12px; }
+.visor-escenario figure { margin:0; text-align:center; }
+#visor-imagen { display:block; width:100%; height:65dvh; object-fit:contain; user-select:none; touch-action:pan-y; cursor:grab; background:white; }
+#visor-pie { color:white; padding:.75rem 0; }
+.visor-ayuda { color:#c9cfc5; text-align:center; font-size:.8rem; margin:.5rem 0 0; }
+@media(max-width:600px) {
+  .miniatura { flex-basis:92%; }
+  .miniatura img { height:190px; }
+  .visor-escenario { gap:4px; grid-template-columns:36px minmax(0,1fr) 36px; }
+  #visor .visor-escenario button { min-width:36px; }
+  #visor-imagen { height:55dvh; }
+}

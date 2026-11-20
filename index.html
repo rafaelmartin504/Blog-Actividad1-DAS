@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moto-Anhelo: un blog sencillo sobre tipos de motos, cuidados y viajes.">
+  <title>Inicio | Moto-Anhelo</title>
+  <!-- Bootstrap aporta la cuadrícula y utilidades. El archivo de estilos CSS se carga después. -->
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/blog.js" defer></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <nav class="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-4" aria-label="Navegación principal">
+    <a class="marca" href="index.html">MOTO<span>-</span><span>ANHELO</span></a>
+    <div class="d-flex gap-4"><a href="index.html">Inicio</a><a href="index.html#entradas">Entradas</a><a href="index.html#sobre">Sobre el blog</a></div>
+    <button id="cambiar-tema" class="boton-tema" type="button" aria-pressed="false">Modo oscuro</button>
+  </nav>
+</header>
+<main id="contenido">
+<section class="portada container py-5">
+<div class="row align-items-center g-5"><div class="col-lg-5"><p class="etiqueta">Un blog para disfrutar de las dos ruedas</p>
+<h1>Motos.<br>Historias.<br><span>Kilómetros.</span></h1>
+<p class="entradilla my-4">Un libro abierto sobre la cultura de la moto, sus cuidados y los lugares que nos invita a descubrir.</p>
+<a class="btn btn-dark rounded-0 px-4 py-3" href="#entradas">Explorar las entradas ↓</a></div><div class="col-lg-7"><img class="foto-portada" src="images/moto-index.jpg" alt="Motocicleta al aire libre"><p class="pie-foto">DOS RUEDAS. MUCHAS FORMAS DE VIVIRLAS.</p></div>
+</div>
+</section>
+<section id="entradas" class="container py-5">
+<div class="titulo-seccion"><div><p class="etiqueta">El blog</p><h2>Últimas entradas</h2></div><span>01 - 03</span>
+</div>
+<!-- OJO: JavaScript filtra las entradas sin recargar la página. -->
+<div class="mb-4">
+  <label for="buscar" class="form-label fw-bold">Buscar entradas</label>
+  <input id="buscar" type="search" class="form-control" placeholder="Por ejemplo: trail, garaje o viaje" aria-controls="lista-entradas" aria-describedby="resultado-busqueda">
+  <p id="resultado-busqueda" class="mt-2 small" role="status">3 entradas disponibles.</p>
+</div>
+<div class="row g-4" id="lista-entradas">
+<div class="col-md-4 entrada"><article class="tarjeta h-100"><a href="tipos-de-motos.html" tabindex="-1" aria-hidden="true"><img src="images/moto-tipos.jpg" alt="" class="foto-tarjeta" loading="lazy"></a><div class="p-4"><p class="etiqueta">Cultura motera</p>
+<h3>Una moto para cada forma de rodar</h3><p>Naked, deportiva, trail o custom: las motos comparten dos ruedas, pero ofrecen experiencias muy distintas para cada uno de nosotros.</p><a class="enlace" href="tipos-de-motos.html">Leer entrada <span aria-hidden="true">→</span></a></div></article>
+</div>
+<div class="col-md-4 entrada"><article class="tarjeta h-100"><a href="cuidar-la-moto.html" tabindex="-1" aria-hidden="true"><img src="images/moto-cuidados.jpg" alt="" class="foto-tarjeta" loading="lazy"></a><div class="p-4"><p class="etiqueta">En el garaje</p>
+<h3>Conocer tu moto también es parte del viaje</h3><p>El garaje también forma parte de la afición: observar la moto permite conocer sus componentes y organizar su cuidado.</p><a class="enlace" href="cuidar-la-moto.html">Leer entrada <span aria-hidden="true">→</span></a></div></article>
+</div>
+<div class="col-md-4 entrada"><article class="tarjeta h-100"><a href="viajar-en-moto.html" tabindex="-1" aria-hidden="true"><img src="images/moto-ruta.jpg" alt="" class="foto-tarjeta" loading="lazy"></a><div class="p-4"><p class="etiqueta">Kilómetros e historias</p>
+<h3>El viaje empieza antes de arrancar</h3><p>Una escapada puede comenzar con un mapa, una conversación y las ganas de descubrir un lugar cercano.</p><a class="enlace" href="viajar-en-moto.html">Leer entrada <span aria-hidden="true">→</span></a></div></article>
+</div>
+</div>
+</section>
+<section id="sobre" class="container py-5">
+<div class="sobre"><p class="etiqueta">Sobre Moto-Anhelo</p>
+<h2>Una afición que se comparte</h2><p>Este blog no nace como un simple proyecto de un estudiante de Ingeniería Informática. Nace como un punto de reunión para todos los hombres a los que su mujer les impide tener sueños. Seguro que en tu caso también es muy popular la frase "¡¡¡a donde vas, que tienes hijos!!!" </p>
+</div>
+</section>
+</main>
+<footer class="pie mt-5"><div class="container py-4 d-flex flex-wrap justify-content-between gap-2"><span>Para volar no necesito dos alas, necesito dos ruedas</span><span>Estoy a 10 minutos, no te apures, llego en 5</a></span></div>
+</footer>
+</body>
+</html>

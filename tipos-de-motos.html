@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moto-Anhelo: un blog sencillo sobre tipos de motos, cuidados y viajes.">
+  <title>Una moto para cada forma de rodar | Moto-Anhelo</title>
+  <!-- Bootstrap aporta la cuadrícula y utilidades. El archivo de estilos CSS se carga después. -->
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/blog.js" defer></script>
+  <script src="js/galerias.js" defer></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <nav class="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-4" aria-label="Navegación principal">
+    <a class="marca" href="index.html">MOTO<span>-</span><span>ANHELO</span></a>
+    <div class="d-flex gap-4"><a href="index.html">Inicio</a><a href="index.html#entradas">Entradas</a><a href="index.html#sobre">Sobre el blog</a></div>
+    <button id="cambiar-tema" class="boton-tema" type="button" aria-pressed="false">Modo oscuro</button>
+  </nav>
+</header>
+<main id="contenido" class="container articulo py-5"><a href="index.html#entradas" class="enlace">← Todas las entradas</a><p class="etiqueta mt-4">Cultura motera | Entrada 01</p><h1>Una moto para cada forma de rodar</h1><p class="entradilla">Naked, deportiva, trail o custom: las motos comparten dos ruedas, pero ofrecen experiencias muy distintas.</p><figure><img class="foto-articulo" src="images/moto-tipos.jpg" alt="Motocicleta aparcada al aire libre"><figcaption>Una de mis favoritas, la Harley-Davidson LiveWire</figcaption></figure>
+<div class="texto-articulo">
+<section>
+<h2>Naked y deportivas</h2><p>Las naked prescinden de grandes carenados y suelen ofrecer una posición relativamente erguida. Son una buena referencia para conocer el concepto de moto polivalente. Las deportivas, en cambio, priorizan una postura más inclinada y una carrocería que protege del aire.</p><!-- Cada galería conserva su propio grupo de imágenes. -->
+<div class="galeria" role="region" aria-label="Imágenes de Naked y deportivas" tabindex="0">
+  <div class="galeria-controles"><button type="button" data-paso="-1" aria-label="Imagen anterior">←</button><span class="galeria-posicion" aria-live="polite">1 / 2</span><button type="button" data-paso="1" aria-label="Imagen siguiente">→</button></div>
+  <div class="galeria-pista"><button type="button" class="miniatura" aria-label="Abrir imagen de Yamaha MT-07 y YZF-R6"><img src="images/galerias/naked-deportiva.jpg" alt="Yamaha MT-07 y YZF-R6" loading="lazy" draggable="false"><span>Yamaha MT-07 y YZF-R6</span></button><button type="button" class="miniatura" aria-label="Abrir imagen de Yamaha YZF-R6"><img src="images/galerias/deportiva.jpg" alt="Yamaha YZF-R6" loading="lazy" draggable="false"><span>Yamaha YZF-R6</span></button></div>
+</div>
+</section>
+<section><h2>Trail y turismo</h2><p>Las trail combinan una posición elevada con un planteamiento versátil. Sus capacidades fuera del asfalto dependen del modelo y del equipamiento. Las motos de turismo se orientan a los recorridos largos, con atención a la comodidad y al transporte de equipaje.</p><!-- Cada galería conserva su propio grupo de imágenes. -->
+<div class="galeria" role="region" aria-label="Imágenes de Trail y turismo" tabindex="0">
+  <div class="galeria-controles"><button type="button" data-paso="-1" aria-label="Imagen anterior">←</button><span class="galeria-posicion" aria-live="polite">1 / 2</span><button type="button" data-paso="1" aria-label="Imagen siguiente">→</button></div>
+  <div class="galeria-pista"><button type="button" class="miniatura" aria-label="Abrir imagen de BMW R 1250 GS Adventure y Honda Gold Wing"><img src="images/galerias/trail-turismo.jpg" alt="BMW R 1250 GS Adventure y Honda Gold Wing" loading="lazy" draggable="false"><span>BMW R 1250 GS Adventure y Honda Gold Wing</span></button><button type="button" class="miniatura" aria-label="Abrir imagen de BMW R 1250 GS"><img src="images/galerias/trail.jpg" alt="BMW R 1250 GS" loading="lazy" draggable="false"><span>BMW R 1250 GS</span></button></div>
+</div>
+</section>
+<section><h2>Custom y scooters</h2><p>Las custom destacan por su estética y su carácter. Los scooters aportan una configuración práctica para los desplazamientos cotidianos. Más que buscar una categoría ganadora, conviene pensar en el uso que queremos dar a la moto.</p><!-- Cada galería conserva su propio grupo de imágenes. -->
+<div class="galeria" role="region" aria-label="Imágenes de Custom y scooters" tabindex="0">
+  <div class="galeria-controles"><button type="button" data-paso="-1" aria-label="Imagen anterior">←</button><span class="galeria-posicion" aria-live="polite">1 / 2</span><button type="button" data-paso="1" aria-label="Imagen siguiente">→</button></div>
+  <div class="galeria-pista"><button type="button" class="miniatura" aria-label="Abrir imagen de Vespa GTS y Harley-Davidson Fat Boy"><img src="images/galerias/custom-scooter.jpg" alt="Vespa GTS y Harley-Davidson Fat Boy" loading="lazy" draggable="false"><span>Vespa GTS y Harley-Davidson Fat Boy</span></button><button type="button" class="miniatura" aria-label="Abrir imagen de Vespa GTS Super"><img src="images/galerias/scooter.jpg" alt="Vespa GTS Super" loading="lazy" draggable="false"><span>Vespa GTS Super</span></button></div>
+</div>
+</section>
+<section><h2>La elección empieza por el uso</h2><p>Ciudad, escapadas y viajes plantean necesidades diferentes. El tamaño, la postura y la facilidad de manejo ayudan a comparar conceptos sin reducirlo todo a la potencia.</p>
+</section>
+</div>
+<nav aria-label="Otras entradas" class="otras mt-5"><h2>Continúa leyendo</h2><a class="d-block mb-2" href="cuidar-la-moto.html">Conocer tu moto también es parte del viaje →</a><a class="d-block mb-2" href="viajar-en-moto.html">El viaje empieza antes de arrancar →</a>
+</nav>
+</main>
+<footer class="pie mt-5"><div class="container py-4 d-flex flex-wrap justify-content-between gap-2"><span>Para volar no necesito dos alas, necesito dos ruedas</span><span>Estoy a 10 minutos, no te apures, llego en 5</a></span></div>
+</footer>
+<!-- Un visor común para todas las categorías de moto muestra la galería que se ha pulsado. -->
+<dialog id="visor" aria-label="Visor de fotografías">
+  <div class="visor-barra"><p id="visor-contador" role="status"></p><button type="button" id="cerrar-visor" aria-label="Cerrar visor" autofocus>✕</button></div>
+  <div class="visor-escenario">
+    <button type="button" id="visor-anterior" aria-label="Fotografía anterior">❮❮</button>
+    <figure><img id="visor-imagen" alt="" draggable="false"><figcaption id="visor-pie"></figcaption></figure>
+    <button type="button" id="visor-siguiente" aria-label="Fotografía siguiente">❯❯</button>
+  </div>
+  <p class="visor-ayuda">Usa las flechas del teclado o desliza sobre la foto. Esc cierra el visor.</p>
+</dialog>
+</body>
+</html>
