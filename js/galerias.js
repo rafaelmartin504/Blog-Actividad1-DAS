@@ -27,7 +27,7 @@ function permitirArrastre(elemento, cambiar) {
     if (!evento.isPrimary || evento.button !== 0) return;
     inicio = { x: evento.clientX, y: evento.clientY, id: evento.pointerId };
     arrastrado = false;
-    // Los gestos se reconocen al soltar el puntero dentro de la imagen o la pista.
+    // Los gestos se reconocen al soltar el puntero dentro de la imagen.
   });
 
   elemento.addEventListener("pointerup", (evento) => {
@@ -68,7 +68,7 @@ document.querySelectorAll(".galeria").forEach((galeria) => {
     boton.addEventListener("click", () => mover(Number(boton.dataset.paso)));
   });
 
-  // Mantiene el contador sincronizado al deslizar con un panel táctil.
+  // Mantiene el contador sincronizado.
   pista.addEventListener("scroll", () => {
     const ancho = fotos[0].getBoundingClientRect().width + 16;
     actual = Math.round(pista.scrollLeft / ancho);
